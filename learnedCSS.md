@@ -6,11 +6,8 @@
 * Online courses, challenges and creation of my own projects.
 
 ## What I learned/used 
-### JS 
-* JavaScript (JS) / ES6
+### CSS
+* CSS
    
-
-
-        
 
 ![End Banner](/Documentation/botton-1200x350.gif)

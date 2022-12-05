@@ -1,54 +1,23 @@
 # Web Developer Study
 ## 12 months web developer study. I decided to dedicate at least 12 months to learn web development.
-## Course (JavaScript Algorithms and Data Structures - freeCodeCamp
+## Challenge - Job listings with filtering - FrontendMentor
 
 ![Begin Banner](/Documentation/top-1200x350.gif)
 
-### Fourth Month / Sprint(July 06/09 - 30/09) 
+### Sixth Month / Sprint(Dec 05/12 - 31/12) 
 * Online courses, challenges and creation of my own projects.
 
-<!-- 
-## What I learned/used (Link for details)
-* JavaScript [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedJAVASCRIPT.md)
-* ES6 / ES2015 [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedES6-ES2015.md)
-* JavaScript - Regular Expressions [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedRegularExpressions.md)
-* JavaScript - Debugging [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedDebugging.md)
-* JavaScript - Basic Data Structure [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/blob/master/learnedBasicDataStructure.md)
-* Basic Algorithm Scripting learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/blob/master/learnedBasicAlgotiyhmScripting.md)
-* Object Oriented Programming learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/blob/master/learnedObjectOrientedProgramming.md)
---->
-<!-- 
-* CSS [link](https://github.com/pittyh6/freeCodeCamp-responsive_web_design-3-12Mths-WebDevStudy-2022-2023/blob/master/learnedCSS.md)
-* HTML [link](https://github.com/pittyh6/freeCodeCamp-responsive_web_design-3-12Mths-WebDevStudy-2022-2023/blob/master/learnedHTML.md)
-* Resources [link](https://github.com/pittyh6/freeCodeCamp-responsive_web_design-3-12Mths-WebDevStudy-2022-2023/blob/master/learnedResources.md)
 
-* Projects [link](https://github.com/pittyh6/freeCodeCamp-responsive_web_design-3-12Mths-WebDevStudy-2022-2023)
-* SASS [link](https://github.com/pittyh6/freeCodeCamp-responsive_web_design-3-12Mths-WebDevStudy-2022-2023/blob/master/learnedSASS.md)
--->
+## What I learned/used (Link for details)
+* HTML [link](https://github.com/pittyh6/job_listings_with_filtering_6-12Mths-WebDevStudy-2022-2023/blob/main/learnedHTML.md)
+* CSS [link](https://github.com/pittyh6/job_listings_with_filtering_6-12Mths-WebDevStudy-2022-2023/blob/main/learnedCSS.md)
+* JavaScript [link](https://github.com/pittyh6/job_listings_with_filtering_6-12Mths-WebDevStudy-2022-2023/blob/main/learnedJAVASCRIPT.md)
+* JSON [link](https://github.com/pittyh6/job_listings_with_filtering_6-12Mths-WebDevStudy-2022-2023/blob/main/learnedJSon.md)
+* Resources [link](https://github.com/pittyh6/job_listings_with_filtering_6-12Mths-WebDevStudy-2022-2023/blob/main/learnedResources.md)
 
  ## Final projects + Result 
-<!-- * 🎯 Certification Project - Survey Form [link](https://github.com/pittyh6/freeCodeCamp-responsive_web_design-3-12Mths-WebDevStudy-2022-2023/tree/master/survey_form) 🥇 -->
 
 
- ## Project + Result 
-* Basic JavaScript Coding [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/tree/master/basic_javaScript)
-* Basic JavaScript learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedJAVASCRIPT.md)
-* ES6/ES2015 Coding [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/tree/master/ES6)
-* ES6/ES2015 learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedES6-ES2015.md)
-* Regex Coding [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/tree/master/js_regular_expression)
-* Regex learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedRegularExpressions.md)
-* Debugging Coding [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/tree/master/debugging)
-* Debugging learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedDebugging.md)
-* Basic data Structure Coding [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/tree/master/basic_data_structure)
-* Basic Data Structure learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/blob/master/learnedBasicDataStructure.md)
-* Basic Algorithm Scripting Coding [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/tree/master/basic_algorithm_scripting)
-* Basic Algorithm Scripting learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/blob/master/learnedBasicAlgotiyhmScripting.md)
-* Object Oriented Programming Coding [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/tree/master/object_oriented_programming)
-* Object Oriented Programming learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/blob/master/learnedObjectOrientedProgramming.md)
-* Functional Programing Coding [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/tree/master/functional_programing)
-* Functional Programing learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/blob/master/learnedFunctionalPrograming.md)
-* Functional Programing Coding [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/tree/master/intermediate_algorithm_scripting)
-* Functional Programing learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/blob/master/learnedIntermediateAlgorithmScripting.md)
 
 ## Previous Projects
 * (1 mth) 12Mths Web Development Study [link](https://github.com/pittyh6/1-12Mths-WebDevelopmentStudy-2022-2023)
@@ -61,7 +30,7 @@
 * (3 mth) 12Mths Web Development Study [link](https://github.com/pittyh6/CSS_transitions-3-12Mths-WebDevStudy-2022-2023) (CSS Transition - codeAcademy)
 * (3 mth) 12Mths Web Development Study [link](https://github.com/pittyh6/Sass_BEM_Responsive-3-12Mths-WebDevStudy-2022-2023) (SASS & BEM - coder coder)
 * (3 mth) & (4 mth) 12Mths Web Development Study [link](https://github.com/pittyh6/freeCodeCamp-responsive_web_design-3e4-12Mths-WebDevStudy-2022-2023) (freeCodeCamp (New) Responsive Web Design)
-
+* (4 mth) & (5 mth)12Mths Web Development Study [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023) (freeCodeCamp JavaScript Algorithms and Data Structures)
 
 <!-- 
 ## Management Tools
@@ -74,8 +43,8 @@
 
 <br>
 
-<p>The content belongs to <a href="https://www.freecodecamp.org/learn" target="_blank">freeCodeCamp.</a> </p>
-<p>Do not use the files from my github account, but use the original content on the <a href="https://www.freecodecamp.org/learn" target="_blank">freeCodeCamp.</a> website.</p>
+<p>The content belongs to <a href="https://www.frontendmentor.io/home" target="_blank">Frontend Mentor.</a> </p>
+<p>Do not use the files from my github account, but use the original content on the <a href="https://www.frontendmentor.io/home" target="_blank">Frontend Mentor.</a> website.</p>
 
 <br>
 
