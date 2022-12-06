@@ -27,6 +27,7 @@ body {
 }
 
 /* Mobile 375px */
+/* ---HEADER--- */
 header {
   width: 100%;
   height: 100px;
@@ -45,6 +46,7 @@ header {
   width: 80%;
   margin: auto;
 }
+/* ---SEARCH--- */
 .search {
   background-color: var(--White);
   border-radius: 5px;
@@ -71,9 +73,11 @@ header {
 .btn:hover {
   text-decoration: underline;
 }
+/* ---JOB-CARDS--- */
 
 /* Tablet 768px */
 @media only screen and (min-width: 768px) {
+  /* ---HEADER--- */
   .header-mobile {
     display: none;
   }
@@ -84,6 +88,7 @@ header {
 
 /* Laptop 1366px */
 @media only screen and (min-width: 1366px) {
+  /* ---SEARCH--- */
   .search-jobs {
     width: 90%;
     margin: auto;
