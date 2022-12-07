@@ -3,7 +3,7 @@
 :root {
   /*COLORS*/
   --DarkCyan: rgb(91, 164, 164);
-  --LightGrayishCyan: rgb(239, 250, 250); /* (Background)*/
+  --LightGrayishCyanB: rgb(239, 250, 250); /* (Background)*/
   --LightGrayishCyan: rgb(238, 246, 246); /*(Filter Tablets)*/
   --DarkGrayishCyan: rgb(123, 142, 142);
   --VeryDarkGrayishCyan: rgb(44, 58, 58);
@@ -21,14 +21,20 @@
   box-sizing: border-box;
 }
 body {
-  background-color: var(--LightGrayishCyan);
+  background-color: var(--LightGrayishCyanB);
   font-family: var(--Font);
   font-weight: 500;
   font-size: 1.066rem;
 }
-h1, h2, .tags-role{
-    font-weight: 700;
+h1,
+h2,
+.tags-role {
+  font-weight: 700;
 }
+h1 {
+  color: var(--DarkCyan);
+}
+
 /* Mobile 375px */
 /* ---HEADER--- */
 header {
@@ -46,7 +52,7 @@ header {
   display: none;
 }
 .body-container {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 /* ---SEARCH--- */
@@ -77,10 +83,80 @@ header {
   text-decoration: underline;
 }
 /* ---JOB-CARDS--- */
-h1{
-color: var(--DarkCyan)
+.card-job {
+  background-color: var(--White);
+  border-left: 6px solid var(--DarkCyan);
+  border-radius: 5px;
+  padding: 0 30px 30px;
+  position: relative;
+  top: 50px;
+}
+.logo {
+  position: absolute;
+  top: -40px;
+}
+.company-feature {
+  padding: 70px 0 0;
+}
+.company-feature * {
+  display: inline;
+}
+.company-name{
+    margin-right: 30px;
+}
+span {
+  border-radius: 30px;
+  color: var(--White);
+  min-height: 30px;
+  padding: 6px 12px 4px;
+  text-transform: uppercase;
+  margin: auto;
+  align-items: center;
+  display: inline-flex;
+}
+.company-tag-new {
+  background-color: var(--DarkCyan);
+  margin-right: 10px;
+}
+.company-tag-featured {
+  background-color: var(--VeryDarkGrayishCyan);
 }
 
+.job-title {
+  padding: 20px 0;
+}
+.infos-job * {
+  display: inline;
+  color: var(--DarkGrayishCyan);
+}
+.circle {
+  line-height: 5px;
+  border-radius: 50%;
+  font-size: 25px;
+  color: var(--DarkGrayishCyan);
+  text-align: center;
+  padding: 0;
+  vertical-align: text-top;
+}
+hr {
+  /* width: 90%; */
+  margin: auto;
+  color: var(--DarkGrayishCyan);
+  border-top: none;
+  border-bottom: 1px solid;
+  margin: 20px 0;
+}
+.tags-role {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tags-role * {
+  background-color: var(--LightGrayishCyan);
+  color: var(--DarkCyan);
+  margin: 10px 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
 /* Tablet 768px */
 @media only screen and (min-width: 768px) {
   /* ---HEADER--- */
@@ -114,7 +190,7 @@ color: var(--DarkCyan)
 }
 
 .attribution {
-    margin-top: 130px;
+  margin-top: 130px;
   font-size: 11px;
   text-align: center;
 }
