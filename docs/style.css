@@ -101,8 +101,8 @@ header {
 .company-feature * {
   display: inline;
 }
-.company-name{
-    margin-right: 30px;
+.company-name {
+  margin-right: 30px;
 }
 span {
   border-radius: 30px;
@@ -179,14 +179,47 @@ hr {
     width: 10%;
     margin: auto;
   }
+
+  /* ---JOB-CARDS--- */
+  hr {
+    display: none;
+  }
+  .logo {
+    position: relative;
+    top: 20px;
+  }
+  .company-feature {
+    padding: 0;
+  }
+  .card-job{
+    display: flex;
+    padding: 30px;
+  }
+ 
+  .tags-role{
+    position: absolute;
+    margin-left: 55%;
+  }
+  .tags-role * {
+    margin: 35px 10px;
+  }
+  .description-job{
+    padding: 0 30px ;
+  }
 }
 
 /* desktop mac 13 pro 1680px */
 @media only screen and (min-width: 1680px) {
+    .tags-role{
+        margin-left: 65%;
+      }
 }
 
 /*High-res laptop or desktop: 1920px*/
 @media only screen and (min-width: 1920px) {
+    .tags-role{
+        margin-left: 68%;
+      }
 }
 
 .attribution {
