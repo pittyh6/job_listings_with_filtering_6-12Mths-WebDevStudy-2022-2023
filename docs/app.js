@@ -9,6 +9,8 @@ const positionEl = $(".job-title")
 const jobPostedEl = $(".job-day-posted")
 const jobType = $(".job-type")
 const jobLocation = $(".job-location")
+const roleEl = $(".role")
+const levelEl = $(".")
 
 
 
@@ -25,6 +27,8 @@ if (data[1].featured !== true) {
     featuredEl.show()
 } // ------
 positionEl.text(data[1].position)
-
+jobPostedEl.text(data[1].postedAt)
+jobType.text(data[1].contract)
+jobLocation.text(data[1].location)
 
 
