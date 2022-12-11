@@ -10,25 +10,26 @@ const jobPostedEl = $(".job-day-posted")
 const jobType = $(".job-type")
 const jobLocation = $(".job-location")
 const roleEl = $(".role")
-const levelEl = $(".")
+const levelEl = $(".level")
 
 
-
-logoEl.attr("src", data[1].logo)
-companyNameEl.text(data[1].company)
-if (data[1].new !== true) { // add elements new and featured  ---
+logoEl.attr("src", data[3].logo)
+companyNameEl.text(data[3].company)
+if (data[3].new !== true) { // add elements new and featured  ---
     newEl.hide()
 } else {
     newEl.show()
 }
-if (data[1].featured !== true) {
+if (data[3].featured !== true) {
     featuredEl.hide()
 } else {
     featuredEl.show()
 } // ------
-positionEl.text(data[1].position)
-jobPostedEl.text(data[1].postedAt)
-jobType.text(data[1].contract)
-jobLocation.text(data[1].location)
+positionEl.text(data[3].position)
+jobPostedEl.text(data[3].postedAt)
+jobType.text(data[3].contract)
+jobLocation.text(data[3].location)
+
+console.log(data[3].languages)
 
 
