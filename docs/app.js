@@ -42,13 +42,14 @@ if(data[3].languages.length == 1){
     for(let i = 0; i < data[3].languages.length; i++){
         console.log("entrou")
         let newDiv = document.createElement('div');
+        newDiv.classList.add('bg-tag')
         newDiv.classList.add('languages')
         console.log(newDiv)
         let getNewDiv = $(".languages")
         //const newContent = languageEl.text(data[3].languages[i])
         getNewDiv.text(data[3].languages[i])
         console.log(getNewDiv)
-        document.body.insertBefore(newDiv, document.body.lastChild)
+        document.body.insertBefore(newDiv, document.body.firstChild)
         console.log(data[3].languages[i])
     }
 }

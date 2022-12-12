@@ -150,7 +150,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
 }
-.tags-role * {
+.bg-tag {
   background-color: var(--LightGrayishCyan);
   color: var(--DarkCyan);
   margin: 10px 10px;
