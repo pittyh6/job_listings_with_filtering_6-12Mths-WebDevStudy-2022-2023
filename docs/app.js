@@ -36,11 +36,21 @@ jobLocation.text(data[3].location)
 //--
 roleEl.text(data[3].role)
 levelEl.text(data[3].level)
-if(data[3].languages.length == 1){
+if (data[3].languages.length == 1) {
     languageEl.text(data[3].languages)
-}else{
-    for(let i = 0; i < data[3].languages.length; i++){
+} else {
+    for (let i = 0; i < data[3].languages.length; i++) {
         console.log("entrou")
+        let tagsRoleEl = $(".tags-role")
+        let textadd = data[3].languages[i]
+        console.log(textadd)
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('bg-tag')
+        newDiv.classList.add('languages')
+        tagsRoleEl.append(newDiv)
+        let getNewDiv = $(".languages")
+        getNewDiv.text(textadd)
+        /*
         let newDiv = document.createElement('div');
         newDiv.classList.add('bg-tag')
         newDiv.classList.add('languages')
@@ -49,12 +59,12 @@ if(data[3].languages.length == 1){
         //const newContent = languageEl.text(data[3].languages[i])
         getNewDiv.text(data[3].languages[i])
         console.log(getNewDiv)
-        document.body.insertBefore(newDiv, document.body.firstChild)
+        document.body.insertBefore(newDiv, document.body.firstChild);
         console.log(data[3].languages[i])
+        */
     }
 }
 
 
-console.log(data[3].languages.length)
 
 
