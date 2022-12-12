@@ -48,7 +48,8 @@ if(data[3].languages.length == 1){
         //const newContent = languageEl.text(data[3].languages[i])
         getNewDiv.text(data[3].languages[i])
         console.log(getNewDiv)
-        document.body.insertBefore(newDiv, document.body.firstChild)
+        document.body.insertBefore(newDiv, document.body.lastChild)
+        console.log(data[3].languages[i])
     }
 }
 
