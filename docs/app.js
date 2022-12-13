@@ -15,7 +15,7 @@ const languageEl = $(".languages")
 const toolEl = $(".tools")
 const tagsRoleEl = $(".tags-role")
 const cardsJobs = $('.cards-jobs') //parent 1l
-const bodyContainer = $(".body-container") //inside cards-jobs
+const bodyContainerCardJobs = $(".cards-jobs .body-container") //inside cards-jobs
 const cardJob = $('.card-job')//child that all elements are inside
 let textAddLang = [] // languages
 let textAddTools = [] // tools
@@ -30,45 +30,49 @@ function runSystem(){
 console.log(data[9])
 console.log(data.length)
 for(let i = 0; i < data.length; i++){
-    console.log("i ", i , ": ", data[i].logo)
     let newDiv = document.createElement('div')
     newDiv.classList.add('card-job')
-    bodyContainer.append(newDiv)
-    addInfos(i)
+    bodyContainerCardJobs.append(newDiv)
+    bodyContainerCardJobs[i].append(addInfos(i))
+    bodyContainerCardJobs[i].append(addLanguages(i))
+    bodyContainerCardJobs[i].append(addTools(i))
+    console.log(newDiv[i])
+    console.log(bodyContainerCardJobs[i])
+    //addInfos(i)
 }
 
-function addInfos() {
+function addInfos(x) {
     //--
-    logoEl.attr("src", data[2].logo)
+    logoEl.attr("src", data[x].logo)
     //--
-    companyNameEl.text(data[2].company)
-    positionEl.text(data[2].position)
+    companyNameEl.text(data[x].company)
+    positionEl.text(data[x].position)
     //--
-    jobPostedEl.text(data[2].postedAt)
-    jobType.text(data[2].contract)
-    jobLocation.text(data[2].location)
+    jobPostedEl.text(data[x].postedAt)
+    jobType.text(data[x].contract)
+    jobLocation.text(data[x].location)
     //--
-    roleEl.text(data[2].role)
-    levelEl.text(data[2].level)
+    roleEl.text(data[x].role)
+    levelEl.text(data[x].level)
     //-- 
 }
 
 function verifyNewAndFeture(){
-    if (data[2].new !== true) { // add elements new and featured  ---
+    if (data[i].new !== true) { // add elements new and featured  ---
         newEl.hide()
     } else {
         newEl.show()
     }
-    if (data[2].featured !== true) {
+    if (data[i].featured !== true) {
         featuredEl.hide()
     } else {
         featuredEl.show()
     } // ------
 }
 
-function addLanguages() {
-    for (let i = 0; i < data[2].languages.length; i++) {
-        textAddLang.push(data[2].languages[i])
+function addLanguages(x) {
+    for (let i = 0; i < data[x].languages.length; i++) {
+        textAddLang.push(data[x].languages[i])
         let newDiv = document.createElement('div');
         newDiv.classList.add('bg-tag')
         newDiv.classList.add('languages')
@@ -78,9 +82,9 @@ function addLanguages() {
     }
 }
 //--
-function addTools() {
-    for (let i = 0; i < data[2].tools.length; i++) {
-        textAddTools.push(data[2].tools[i])
+function addTools(x) {
+    for (let i = 0; i < data[x].tools.length; i++) {
+        textAddTools.push(data[x].tools[i])
         let newDiv = document.createElement('div')
         newDiv.classList.add('bg-tag')
         newDiv.classList.add('tools')
