@@ -20,34 +20,28 @@ const cardJob = $('.card-job')//child that all elements are inside
 let textAddLang = [] // languages
 let textAddTools = [] // tools
 
-function runSystem(){
-    addInfos()
-    verifyNewAndFeture()
-    addLanguages()
-    addTools()
-}
+// function runSystem() {
+//     addInfos()
+//     verifyNewAndFeture()
+//     addLanguages()
+//     addTools()
+// }
 
 
 
 let dataFromJson = []
 let getNewCard = ''
-for(let i = 0; i < data.length; i++){
+for (let i = 0; i < data.length; i++) {
     let newDiv = document.createElement('div')
     newDiv.classList.add('card-job')
     bodyContainerCardJobs.append(newDiv)
     getNewCard = $('.card-job:last')
-    getNewCard.append(addInfos(i))
-    // bodyContainerCardJobs[i].append(addInfos(i))
-    // bodyContainerCardJobs[i].append(addLanguages(i))
-    // bodyContainerCardJobs[i].append(addTools(i))
-   // console.log(newDiv[i])
-    //console.log(bodyContainerCardJobs[i])
-    //console.log(getNewCard)
-    //addInfos(i)
+    getNewCard.append(addLogo(i))
+    getNewCard.append(addDescJob(i))
 }
 
-function addInfos(x) {
-    //--logo
+
+function addLogo(x) {
     let newDivLogo = document.createElement('div')
     newDivLogo.classList.add('logo')
     let newImgLogo = document.createElement('img')
@@ -56,6 +50,38 @@ function addInfos(x) {
     newDivLogo.append(newImgLogo)
     let newL = $('.logo-img:last')
     newL.attr("src", data[x].logo)
+}
+function addDescJob(x) {
+    let newDescJob = document.createElement('div')
+    newDescJob.classList.add('description-job')
+    getNewCard.append(newDescJob)
+    let newFeature = document.createElement('div')
+    newFeature.classList.add('company-feature')
+    newDescJob.append(newFeature)
+}
+
+function addCompanyFeature(x) {
+    let newDivCompanyName = document.createElement('div') // parent 1
+    newDivCompanyName.classList.add('company-feature')
+    let newH = document.createElement('h1')
+    newH.classList.add("company-name")
+    let newSpanFirst = document.createElement('span')
+    newSpanFirst.classList.add("company-tag-new")
+    let newSpanSecond = document.createElement('span')
+    newSpanSecond.classList.add("company-tag-featured")
+
+    newDivCompanyName.append(newH)
+    newDivCompanyName.append(newSpanFirst)
+    newDivCompanyName.append(newSpanSecond)
+
+    let newH1el = $('.company-name:last')
+    console.log(newH1el)
+    newH1el.text(data[x].company)
+}
+function addJobTitle() { }
+function addJobInfos() { }
+
+function addInfos(x) {
     //--
     companyNameEl.text(data[x].company)
     positionEl.text(data[x].position)
@@ -69,7 +95,7 @@ function addInfos(x) {
     //-- 
 }
 
-function verifyNewAndFeture(){
+function verifyNewAndFeture() {
     if (data[i].new !== true) { // add elements new and featured  ---
         newEl.hide()
     } else {
