@@ -27,23 +27,35 @@ function runSystem(){
     addTools()
 }
 
-console.log(data[9])
-console.log(data.length)
+
+
+let dataFromJson = []
+let getNewCard = ''
 for(let i = 0; i < data.length; i++){
     let newDiv = document.createElement('div')
     newDiv.classList.add('card-job')
     bodyContainerCardJobs.append(newDiv)
-    bodyContainerCardJobs[i].append(addInfos(i))
-    bodyContainerCardJobs[i].append(addLanguages(i))
-    bodyContainerCardJobs[i].append(addTools(i))
-    console.log(newDiv[i])
-    console.log(bodyContainerCardJobs[i])
+    getNewCard = $('.card-job:last')
+    getNewCard.append(addInfos(i))
+    // bodyContainerCardJobs[i].append(addInfos(i))
+    // bodyContainerCardJobs[i].append(addLanguages(i))
+    // bodyContainerCardJobs[i].append(addTools(i))
+   // console.log(newDiv[i])
+    //console.log(bodyContainerCardJobs[i])
+    //console.log(getNewCard)
     //addInfos(i)
 }
 
 function addInfos(x) {
-    //--
-    logoEl.attr("src", data[x].logo)
+    //--logo
+    let newDivLogo = document.createElement('div')
+    newDivLogo.classList.add('logo')
+    let newImgLogo = document.createElement('img')
+    newImgLogo.classList.add('logo-img')
+    getNewCard.append(newDivLogo)
+    newDivLogo.append(newImgLogo)
+    let newL = $('.logo-img:last')
+    newL.attr("src", data[x].logo)
     //--
     companyNameEl.text(data[x].company)
     positionEl.text(data[x].position)
