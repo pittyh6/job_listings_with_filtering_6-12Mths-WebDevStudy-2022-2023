@@ -13,45 +13,52 @@ const roleEl = $(".role")
 const levelEl = $(".level")
 const languageEl = $(".languages")
 const toolEl = $(".tools")
+const tagsRoleEl = $(".tags-role")
 
 //--
-logoEl.attr("src", data[3].logo)
+logoEl.attr("src", data[2].logo)
 //--
-companyNameEl.text(data[3].company)
-if (data[3].new !== true) { // add elements new and featured  ---
+companyNameEl.text(data[2].company)
+if (data[2].new !== true) { // add elements new and featured  ---
     newEl.hide()
 } else {
     newEl.show()
 }
-if (data[3].featured !== true) {
+if (data[2].featured !== true) {
     featuredEl.hide()
 } else {
     featuredEl.show()
 } // ------
-positionEl.text(data[3].position)
+positionEl.text(data[2].position)
 //--
-jobPostedEl.text(data[3].postedAt)
-jobType.text(data[3].contract)
-jobLocation.text(data[3].location)
+jobPostedEl.text(data[2].postedAt)
+jobType.text(data[2].contract)
+jobLocation.text(data[2].location)
 //--
-roleEl.text(data[3].role)
-levelEl.text(data[3].level)
-
-let textadd = []
+roleEl.text(data[2].role)
+levelEl.text(data[2].level)
+//-- 
+let textAddLang = [] // languages
 for (let i = 0; i < data[2].languages.length; i++) {
-    console.log("entrou")
-    let tagsRoleEl = $(".tags-role")
-    textadd.push(data[2].languages[i])
-    console.log(textadd)
+    textAddLang.push(data[2].languages[i])
     let newDiv = document.createElement('div');
     newDiv.classList.add('bg-tag')
     newDiv.classList.add('languages')
     tagsRoleEl.append(newDiv)
     let getNewDiv = $(".languages:last");
-    getNewDiv.text(textadd[i])
+    getNewDiv.text(textAddLang[i])
 }
-
-
+//--
+let textAddTools = []
+for(let i = 0; i < data[2].tools.length; i++){
+    textAddTools.push(data[2].tools[i])
+    let newDiv = document.createElement('div')
+    newDiv.classList.add('bg-tag')
+    newDiv.classList.add('tools')
+    tagsRoleEl.append(newDiv)
+    let getNewDiv = $('.tools:last')
+    getNewDiv.text(textAddTools[i])
+}
 
 
 
