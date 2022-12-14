@@ -58,26 +58,35 @@ function addDescJob(x) {
     let newFeature = document.createElement('div')
     newFeature.classList.add('company-feature')
     newDescJob.append(newFeature)
-}
-
-function addCompanyFeature(x) {
-    let newDivCompanyName = document.createElement('div') // parent 1
-    newDivCompanyName.classList.add('company-feature')
+    
+    
     let newH = document.createElement('h1')
     newH.classList.add("company-name")
     let newSpanFirst = document.createElement('span')
     newSpanFirst.classList.add("company-tag-new")
     let newSpanSecond = document.createElement('span')
     newSpanSecond.classList.add("company-tag-featured")
-
-    newDivCompanyName.append(newH)
-    newDivCompanyName.append(newSpanFirst)
-    newDivCompanyName.append(newSpanSecond)
-
-    let newH1el = $('.company-name:last')
-    console.log(newH1el)
+    newFeature.append(newH)
+    newFeature.append(newSpanFirst)
+    newFeature.append(newSpanSecond)
+    let newH1el = $('.company-name:last') //company name
     newH1el.text(data[x].company)
+    let newSpanNew = $('.company-tag-new:last')
+    let newSpanFeature = $('.company-tag-featured:last')
+    if (data[x].new !== true) { // add elements new and featured  ---
+        newSpanNew.hide()
+    } else {
+        newSpanNew.text('NEW')
+        newSpanNew.show()
+    }
+    if (data[x].featured !== true) {
+        newSpanFeature.hide()
+    } else {
+        newSpanFeature.text('FEATURED')
+        newSpanFeature.show()
+    } // ------
 }
+
 function addJobTitle() { }
 function addJobInfos() { }
 
@@ -95,7 +104,7 @@ function addInfos(x) {
     //-- 
 }
 
-function verifyNewAndFeture() {
+function verifyNewAndFeture(x) {
     if (data[i].new !== true) { // add elements new and featured  ---
         newEl.hide()
     } else {
