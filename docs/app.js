@@ -85,10 +85,20 @@ function addDescJob(x) {
         newSpanFeature.text('FEATURED')
         newSpanFeature.show()
     } // ------
+
+    let newDivJob = document.createElement('div')
+    newDivJob.classList.add('job')
+    let newH2 = document.createElement('h2')
+    newH2.classList.add('job-title')
+    newDescJob.append(newDivJob)
+    newDivJob.append(newH2)
+    let newH2Text = $('.job-title:last')
+    newH2Text.text(data[x].position)
+    // ------
+
+    
 }
 
-function addJobTitle() { }
-function addJobInfos() { }
 
 function addInfos(x) {
     //--
