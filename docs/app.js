@@ -38,6 +38,8 @@ for (let i = 0; i < data.length; i++) {
     getNewCard = $('.card-job:last')
     getNewCard.append(addLogo(i))
     getNewCard.append(addDescJob(i))
+    let newHr = document.createElement('hr')
+    getNewCard.append(newHr)
 }
 
 
@@ -96,18 +98,38 @@ function addDescJob(x) {
     newH2Text.text(data[x].position)
     // ------
 
-    
+    let newDivInfoJob = document.createElement('div')
+    newDivInfoJob.classList.add('infos-job')
+    let newPDayJobPosted = document.createElement('p')
+    newPDayJobPosted.classList.add('job-day-posted')
+    let newSpanCircle = document.createElement('span')
+    newSpanCircle.classList.add('circle')
+    let newPJobType = document.createElement('p')
+    newPJobType.classList.add('job-type')
+    let newPJobLocation = document.createElement('p')
+    newPJobLocation.classList.add('job-location')
+    newDescJob.append(newDivInfoJob)
+    newDivInfoJob.append(newPDayJobPosted) //post at
+    let newPostAtText = $('.job-day-posted:last')
+    newPostAtText.text(data[x].postedAt)
+    newDivInfoJob.append(newSpanCircle) // circle dot btwn texts
+    let newSpanCircleText = $('.circle')
+    newSpanCircleText.text('.')
+    newDivInfoJob.append(newPJobType)//type job
+    let newJobTypeText = $('.job-type:last')
+    newJobTypeText.text(data[x].contract)
+    let newSpanCircle2 = document.createElement('span') //circle
+    newSpanCircle2.classList.add('circle')
+    newDivInfoJob.append(newSpanCircle2) // circle dot btwn texts
+    let newSpanCircleText2 = $('.circle')
+    newSpanCircleText2.text('.')
+    newDivInfoJob.append(newPJobLocation)
+    let newPJobLocationText = $('.job-location:last')
+    newPJobLocationText.text(data[x].location)
 }
 
 
 function addInfos(x) {
-    //--
-    companyNameEl.text(data[x].company)
-    positionEl.text(data[x].position)
-    //--
-    jobPostedEl.text(data[x].postedAt)
-    jobType.text(data[x].contract)
-    jobLocation.text(data[x].location)
     //--
     roleEl.text(data[x].role)
     levelEl.text(data[x].level)
