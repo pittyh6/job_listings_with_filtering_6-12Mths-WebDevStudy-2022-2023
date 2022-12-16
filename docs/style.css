@@ -25,6 +25,7 @@ body {
   font-family: var(--Font);
   font-weight: 500;
   font-size: 1.066rem;
+  pointer-events: none;
 }
 h1,
 h2,
@@ -161,6 +162,7 @@ hr {
   margin: 10px 10px;
   padding: 10px;
   border-radius: 5px;
+  pointer-events: auto;
 }
 /* Tablet 768px */
 @media only screen and (min-width: 768px) {

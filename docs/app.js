@@ -148,7 +148,13 @@ function addInfos(x) {
 }
 
 addEventListener('click',(event)=>{
-    console.log(event.target)
-    console.log(event.target.className)
-    console.log(event.target.innerHTML)
+    if(event.target.className.includes('bg-tag')){
+        console.log(event.target)
+        console.log(event.target.className)
+        console.log(event.target.innerHTML)
+    }
+    else{
+        console.log("ignore")
+    }
+    
 })
