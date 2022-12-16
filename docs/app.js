@@ -17,8 +17,8 @@ const tagsRoleEl = $(".tags-role")
 const cardsJobs = $('.cards-jobs') //parent 1l
 const bodyContainerCardJobs = $(".cards-jobs .body-container") //inside cards-jobs
 const cardJob = $('.card-job')//child that all elements are inside
-let textAddLang = [] // languages
-let textAddTools = [] // tools
+//let textAddLang = [] // languages
+//let textAddTools = [] // tools
 
 // function runSystem() {
 //     addInfos()
@@ -40,6 +40,7 @@ for (let i = 0; i < data.length; i++) {
     getNewCard.append(addDescJob(i))
     let newHr = document.createElement('hr')
     getNewCard.append(newHr)
+    getNewCard.append(addInfos(i))
 }
 
 
@@ -130,26 +131,42 @@ function addDescJob(x) {
 
 
 function addInfos(x) {
-    //--
-    roleEl.text(data[x].role)
-    levelEl.text(data[x].level)
-    //-- 
+    let newDivTagsRole = document.createElement('div')
+    newDivTagsRole.classList.add('tags-role')
+    getNewCard.append(newDivTagsRole)
+
+    let newDivRole = document.createElement('div') //role
+    newDivRole.classList.add('bg-tag')
+    newDivRole.classList.add('role')
+    let newDivLevel = document.createElement('div')//level
+    newDivLevel.classList.add('bg-tag')
+    newDivLevel.classList.add('level')
+    newDivTagsRole.append(newDivRole)
+    newDivTagsRole.append(newDivLevel)
+    let getNewRole = $('.role:last')
+    getNewRole.text(data[x].role)
+    let getNewLevel = $('.level:last')
+    getNewLevel.text(data[x].level)
+
+    
+    let textAddLang = [] //languages
+    for (let i = 0; i < data[x].languages.length; i++) {
+        textAddLang.push(data[x].languages[i])
+        let newDivLanguages = document.createElement('div');
+        newDivLanguages.classList.add('bg-tag')
+        newDivLanguages.classList.add('languages')
+        newDivTagsRole.append(newDivLanguages)
+        let getNewDivLanguages = $(".languages:last");
+        getNewDivLanguages.text(textAddLang[i])
+    }
+
+    let textAddTools = [] // tools
+
 }
 
-function verifyNewAndFeture(x) {
-    if (data[i].new !== true) { // add elements new and featured  ---
-        newEl.hide()
-    } else {
-        newEl.show()
-    }
-    if (data[i].featured !== true) {
-        featuredEl.hide()
-    } else {
-        featuredEl.show()
-    } // ------
-}
 
 function addLanguages(x) {
+
     for (let i = 0; i < data[x].languages.length; i++) {
         textAddLang.push(data[x].languages[i])
         let newDiv = document.createElement('div');
