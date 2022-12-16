@@ -161,6 +161,15 @@ function addInfos(x) {
     }
 
     let textAddTools = [] // tools
+    for (let i = 0; i < data[x].tools.length; i++) {
+        textAddTools.push(data[x].tools[i])
+        let newDivTools = document.createElement('div')
+        newDivTools.classList.add('bg-tag')
+        newDivTools.classList.add('tools')
+        newDivTagsRole.append(newDivTools)
+        let getNewDivTools = $('.tools:last')
+        getNewDivTools.text(textAddTools[i])
+    }
 
 }
 

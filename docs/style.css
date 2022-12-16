@@ -83,6 +83,10 @@ header {
   text-decoration: underline;
 }
 /* ---JOB-CARDS--- */
+.cards-jobs {
+  position: relative;
+  top: -100px;
+}
 .card-job {
   background-color: var(--White);
   border-left: 6px solid var(--DarkCyan);
@@ -90,6 +94,7 @@ header {
   padding: 0 30px 30px;
   position: relative;
   top: 50px;
+  margin: 105px 0;
 }
 .logo {
   position: absolute;
@@ -191,9 +196,13 @@ hr {
   .company-feature {
     padding: 0;
   }
+  .cards-jobs {
+    top: -50px;
+}
   .card-job {
     display: flex;
     padding: 30px;
+    margin: 40px 0;
   }
 
   .tags-role {
