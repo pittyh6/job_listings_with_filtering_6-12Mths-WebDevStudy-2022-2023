@@ -147,7 +147,8 @@ function addInfos(x) {
 
 }
 
-
-
-
-runSystem()
+addEventListener('click',(event)=>{
+    console.log(event.target)
+    console.log(event.target.className)
+    console.log(event.target.innerHTML)
+})
