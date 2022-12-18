@@ -2,7 +2,7 @@ import data from './data.json' assert {type: 'json'};
 
 // Elements Document
 const bodyContainerCardJobs = $(".cards-jobs .body-container") //inside cards-jobs
-
+let searchTextBar = $('.search')
 
 let getNewCard = ''
 for (let i = 0; i < data.length; i++) {
@@ -17,6 +17,23 @@ for (let i = 0; i < data.length; i++) {
     getNewCard.append(addInfos(i))
 }
 
+addEventListener('click',(event)=>{
+    if(event.target.className.includes('bg-tag')){
+        console.log(event.target)
+        console.log(event.target.className)
+        console.log(event.target.innerHTML)
+
+        let newClickedLink = document.createElement('div')
+        newClickedLink.classList.add('bg-tag')
+        let newOne = $('.bg-tag:last')
+        newOne.text(event.target.innerHTML)
+        searchTextBar.append(newOne)
+    }
+    else{
+        console.log("ignore")
+    }
+    
+})
 
 function addLogo(x) {
     let newDivLogo = document.createElement('div')
@@ -147,14 +164,3 @@ function addInfos(x) {
 
 }
 
-addEventListener('click',(event)=>{
-    if(event.target.className.includes('bg-tag')){
-        console.log(event.target)
-        console.log(event.target.className)
-        console.log(event.target.innerHTML)
-    }
-    else{
-        console.log("ignore")
-    }
-    
-})
