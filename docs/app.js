@@ -2,7 +2,10 @@ import data from './data.json' assert {type: 'json'};
 
 // Elements Document
 const bodyContainerCardJobs = $(".cards-jobs .body-container") //inside cards-jobs
-let searchTextBar = $('.search')
+const searchTextBar = $('.search')
+const searchJob = $('.search-jobs')
+const searchJobJobs = $('.jobs')
+
 
 let getNewCard = ''
 for (let i = 0; i < data.length; i++) {
@@ -27,7 +30,7 @@ addEventListener('click',(event)=>{
         newClickedLink.classList.add('bg-tag')
         let newOne = $('.bg-tag:last')
         newOne.text(event.target.innerHTML)
-        searchTextBar.append(newOne)
+        searchJobJobs.append(newOne)
     }
     else{
         console.log("ignore")
