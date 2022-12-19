@@ -164,6 +164,19 @@ hr {
   width: fit-content;
   display: inline-flex;
 }
+.bg-tag-padding{
+  padding: 0 !important;
+}
+.jobs .bg-tag::after{
+  content: url('/docs/images/icon-remove.svg'); 
+  background-color: var(--DarkCyan);
+  position: relative;
+  left: 15px;
+  padding: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 /* Tablet 768px */
 @media only screen and (min-width: 768px) {
   /* ---HEADER--- */

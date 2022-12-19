@@ -27,11 +27,11 @@ addEventListener('click',function addJobsSearch(event){
         console.log(event.target.className)
         console.log(event.target.innerHTML)
 
-        let newClickedLink = document.createElement('div')
-        newClickedLink.classList.add('bg-tag')
-        let newOne = $('.bg-tag:last')
-        newOne.text(event.target.innerHTML)
+        let newOne = $('.bg-tag:last').css("padding", "0 15px")
+        newOne.text(event.target.innerHTML).css("align-items", "center")
         searchJobJobs.append(newOne)
+
+
     }
     else{
         console.log("ignore")
