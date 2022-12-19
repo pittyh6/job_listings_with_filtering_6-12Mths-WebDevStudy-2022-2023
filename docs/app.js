@@ -20,7 +20,8 @@ for (let i = 0; i < data.length; i++) {
     getNewCard.append(addInfos(i))
 }
 
-addEventListener('click',(event)=>{
+// Add roles
+addEventListener('click',function addJobsSearch(event){
     if(event.target.className.includes('bg-tag')){
         console.log(event.target)
         console.log(event.target.className)
@@ -37,6 +38,17 @@ addEventListener('click',(event)=>{
     }
     
 })
+
+// clear the search jobs list
+addEventListener('click', function clearSearch(event){
+    if(event.target.className.includes('btn')){
+        console.log("clear", event.target)
+        let clearEl = $('.jobs .bg-tag')
+        console.log(clearEl)
+        clearEl.remove()
+    }
+})
+
 
 function addLogo(x) {
     let newDivLogo = document.createElement('div')
