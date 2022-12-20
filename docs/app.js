@@ -22,7 +22,7 @@ for (let i = 0; i < data.length; i++) {
 
 // Add roles
 addEventListener('click',function addJobsSearch(event){
-    if(event.target.className.includes('bg-tag')){
+    if(event.target.className.includes('bg-tag') && !event.target.className.includes('remove')){
         console.log(event.target)
         console.log(event.target.className)
         console.log(event.target.innerHTML)
@@ -30,13 +30,22 @@ addEventListener('click',function addJobsSearch(event){
         let newOne = $('.bg-tag:last').css("padding", "0 15px")
         newOne.text(event.target.innerHTML).css("align-items", "center")
         searchJobJobs.append(newOne)
-
-
+        newOne.addClass('remove')
     }
     else{
         console.log("ignore")
     }
     
+})
+
+
+// click icon x close
+addEventListener('click',function removeJobsSearch(event){
+    if(event.target.className.includes('remove')){
+        console.log(event.target)
+        let closeElement = $('.remove')
+        event.target.remove()
+    }
 })
 
 // clear the search jobs list
