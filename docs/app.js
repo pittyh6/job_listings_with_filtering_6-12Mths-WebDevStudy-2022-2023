@@ -20,33 +20,6 @@ for (let i = 0; i < data.length; i++) {
     getNewCard.append(addInfos(i))
 }
 
-// Add roles
-addEventListener('click',function addJobsSearch(event){
-    if(event.target.className.includes('bg-tag') && !event.target.className.includes('remove')){
-        let newOne = $('.bg-tag:last').css("padding", "0 15px")
-        newOne.text(event.target.innerHTML).css("align-items", "center")
-        searchJobJobs.append(newOne)
-        newOne.addClass('remove')
-    }
-})
-
-
-// click icon x close
-addEventListener('click',function removeJobsSearch(event){
-    if(event.target.className.includes('remove')){
-        event.target.remove()
-    }
-})
-
-// clear the search jobs list
-addEventListener('click', function clearSearch(event){
-    if(event.target.className.includes('btn')){
-        let clearEl = $('.jobs .bg-tag')
-        clearEl.remove()
-    }
-})
-
-
 function addLogo(x) {
     let newDivLogo = document.createElement('div')
     newDivLogo.classList.add('logo')
@@ -176,3 +149,44 @@ function addInfos(x) {
 
 }
 
+
+// Add roles
+addEventListener('click',function addJobsSearch(event){
+    if(event.target.className.includes('bg-tag') && !event.target.className.includes('remove')){
+        let newOne = $('.bg-tag:last').css("padding", "0 15px")
+        newOne.text(event.target.innerHTML).css("align-items", "center")
+        searchJobJobs.append(newOne)
+        newOne.addClass('remove')
+        showSelectedJobs(event.target)
+    }
+})
+
+// click icon x close
+addEventListener('click',function removeJobsSearch(event){
+    if(event.target.className.includes('remove')){
+        event.target.remove()
+    }
+})
+
+// clear the search jobs list
+addEventListener('click', function clearSearch(event){
+    if(event.target.className.includes('btn')){
+        let clearEl = $('.jobs .bg-tag')
+        clearEl.remove()
+    }
+})
+
+
+function showSelectedJobs(jobSelected){
+    if(searchJobJobs.children.length>0){
+        console.log('searchJobJobs', searchJobJobs)
+        console.log('element clicked', jobSelected)
+        console.log('element innerHtml', jobSelected.innerHTML)
+        console.log('all data', data)
+    }else{
+        console.log('no child')
+    }
+        
+    
+    
+}
