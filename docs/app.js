@@ -4,7 +4,7 @@ import data from './data.json' assert {type: 'json'};
 const bodyContainerCardJobs = $(".cards-jobs .body-container") //inside cards-jobs
 const searchTextBar = $('.search')
 const searchJob = $('.search-jobs')
-const searchJobJobs = $('.jobs')
+let searchJobJobs = $('.jobs')
 
 
 let getNewCard = ''
@@ -173,20 +173,18 @@ addEventListener('click', function clearSearch(event){
     if(event.target.className.includes('btn')){
         let clearEl = $('.jobs .bg-tag')
         clearEl.remove()
+        showSelectedJobs(event.target)
     }
 })
 
 
 function showSelectedJobs(jobSelected){
-    if(searchJobJobs.children.length>0){
-        console.log('searchJobJobs', searchJobJobs)
+    let findJobsAdded = document.querySelector('.jobs')
+    if(findJobsAdded.querySelector('.remove') !== null){
         console.log('element clicked', jobSelected)
         console.log('element innerHtml', jobSelected.innerHTML)
         console.log('all data', data)
     }else{
         console.log('no child')
     }
-        
-    
-    
 }
