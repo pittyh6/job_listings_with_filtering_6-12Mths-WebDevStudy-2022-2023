@@ -165,6 +165,7 @@ addEventListener('click',function addJobsSearch(event){
 addEventListener('click',function removeJobsSearch(event){
     if(event.target.className.includes('remove')){
         event.target.remove()
+        showSelectedJobs(event.target)
     }
 })
 
