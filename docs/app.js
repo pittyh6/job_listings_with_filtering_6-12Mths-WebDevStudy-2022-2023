@@ -188,7 +188,9 @@ function showSelectedJobs(jobSelected){
         if(jobSelected.className.includes( 'role')){
             console.log('data role ', data[0].role)
             for(let x in data){
-                console.log('x in data ', data[x])
+                if(data[x].role !== jobSelected.innerHTML){
+                    console.log('x in data ', data[x].role)
+                }
             }
         }else{
             console.log('not a role')
