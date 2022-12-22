@@ -184,7 +184,15 @@ function showSelectedJobs(jobSelected){
     if(findJobsAdded.querySelector('.remove') !== null){
         console.log('element clicked', jobSelected)
         console.log('element innerHtml', jobSelected.innerHTML)
-        console.log('all data', data)
+        
+        if(jobSelected.className.includes( 'role')){
+            console.log('data role ', data[0].role)
+            for(let x in data){
+                console.log('x in data ', data[x])
+            }
+        }else{
+            console.log('not a role')
+        }
     }else{
         console.log('no child')
     }
