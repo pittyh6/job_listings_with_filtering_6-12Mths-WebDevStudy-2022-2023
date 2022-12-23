@@ -182,15 +182,18 @@ addEventListener('click', function clearSearch(event){
 function showSelectedJobs(jobSelected){
     let findJobsAdded = document.querySelector('.jobs')
     if(findJobsAdded.querySelector('.remove') !== null){
-        console.log('element clicked', jobSelected)
-        console.log('element innerHtml', jobSelected.innerHTML)
-        
         if(jobSelected.className.includes( 'role')){
-            console.log('data role ', data[0].role)
             for(let x in data){
-                if(data[x].role !== jobSelected.innerHTML){
+                if((jobSelected.innerHTML).includes(data[x].role) ){
+                    console.log('SHOW')
+                    console.log('innerHTML ', jobSelected.innerHTML)
                     console.log('x in data ', data[x].role)
-                    console.log($('.card-job .description-job .job-title').text())
+                    $('.card-job').show()
+                }else{
+                    console.log('HIDE')
+                    console.log('innerHTML ', jobSelected.innerHTML)
+                    console.log('x in data ', data[x].role)
+                    $('.card-job').hide()
                 }
             }
         }else{
