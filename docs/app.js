@@ -190,6 +190,7 @@ function showSelectedJobs(jobSelected){
             for(let x in data){
                 if(data[x].role !== jobSelected.innerHTML){
                     console.log('x in data ', data[x].role)
+                    console.log($('.card-job .description-job .job-title').text())
                 }
             }
         }else{
