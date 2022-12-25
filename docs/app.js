@@ -8,17 +8,20 @@ let searchJobJobs = $('.jobs')
 
 
 let getNewCard = ''
-for (let i = 0; i < data.length; i++) {
-    let newDiv = document.createElement('div')
-    newDiv.classList.add('card-job')
-    bodyContainerCardJobs.append(newDiv)
-    getNewCard = $('.card-job:last')
-    getNewCard.append(addLogo(i))
-    getNewCard.append(addDescJob(i))
-    let newHr = document.createElement('hr')
-    getNewCard.append(newHr)
-    getNewCard.append(addInfos(i))
+function startProcessing(){
+    for (let i = 0; i < data.length; i++) {
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('card-job')
+        bodyContainerCardJobs.append(newDiv)
+        getNewCard = $('.card-job:last')
+        getNewCard.append(addLogo(i))
+        getNewCard.append(addDescJob(i))
+        let newHr = document.createElement('hr')
+        getNewCard.append(newHr)
+        getNewCard.append(addInfos(i))
+    }
 }
+
 
 function addLogo(x) {
     let newDivLogo = document.createElement('div')
@@ -175,6 +178,7 @@ addEventListener('click', function clearSearch(event){
         let clearEl = $('.jobs .bg-tag')
         clearEl.remove()
         showSelectedJobs(event.target)
+        location.reload()
     }
 })
 
@@ -199,3 +203,5 @@ function showSelectedJobs(jobSelected){
         console.log('no child')
     }
 }
+
+startProcessing()
