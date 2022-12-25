@@ -183,17 +183,13 @@ function showSelectedJobs(jobSelected){
     let findJobsAdded = document.querySelector('.jobs')
     if(findJobsAdded.querySelector('.remove') !== null){
         if(jobSelected.className.includes( 'role')){
-            for(let x in data){
-                if((jobSelected.innerHTML).includes(data[x].role) ){
-                    console.log('SHOW')
-                    console.log('innerHTML ', jobSelected.innerHTML)
-                    console.log('x in data ', data[x].role)
-                    $('.card-job').show()
+            for(let i = 0; i < data.length; i++){
+                if((jobSelected.innerHTML).includes(data[i].role) ){
+                    console.log('SHOW elements')
                 }else{
                     console.log('HIDE')
-                    console.log('innerHTML ', jobSelected.innerHTML)
-                    console.log('x in data ', data[x].role)
-                    $('.card-job').hide()
+                    let cardJobDivSelectedHide = $('.card-job')[i]
+                    cardJobDivSelectedHide.style.display = 'none'
                 }
             }
         }else{
