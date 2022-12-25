@@ -196,6 +196,16 @@ function showSelectedJobs(jobSelected){
                     cardJobDivSelectedHide.style.display = 'none'
                 }
             }
+        }else if(jobSelected.className.includes( 'level')){
+            for(let i = 0; i < data.length; i++){
+                if((jobSelected.innerHTML).includes(data[i].level) ){
+                    console.log('SHOW elements')
+                }else{
+                    console.log('HIDE')
+                    let cardJobDivSelectedHide = $('.card-job')[i]
+                    cardJobDivSelectedHide.style.display = 'none'
+                }
+            }
         }else{
             console.log('not a role')
         }
