@@ -186,6 +186,56 @@ addEventListener('click', function clearSearch(event){
 function showSelectedJobs(jobSelected){
     let findJobsAdded = document.querySelector('.jobs')
     if(findJobsAdded.querySelector('.remove') !== null){
+        let test = jobSelected.className.includes()
+        switch(true){
+            case jobSelected.className.includes('role'):
+                for(let i = 0; i < data.length; i++){
+                    if((jobSelected.innerHTML).includes(data[i].role) ){
+                        console.log('SHOW elements')
+                    }else{
+                        console.log('HIDE')
+                        let cardJobDivSelectedHide = $('.card-job')[i]
+                        cardJobDivSelectedHide.style.display = 'none'
+                    }
+                }
+                break;
+            case  jobSelected.className.includes('level'):
+                for(let i = 0; i < data.length; i++){
+                    if((jobSelected.innerHTML).includes(data[i].level) ){
+                        console.log('SHOW elements')
+                    }else{
+                        console.log('HIDE')
+                        let cardJobDivSelectedHide = $('.card-job')[i]
+                        cardJobDivSelectedHide.style.display = 'none'
+                    }
+                }
+                break;
+            case  jobSelected.className.includes('languages'):
+                for(let i = 0; i < data.length; i++){
+                    if((jobSelected.innerHTML).includes(data[i].languages) ){
+                        console.log('SHOW elements')
+                    }else{
+                        console.log('HIDE')
+                        let cardJobDivSelectedHide = $('.card-job')[i]
+                        cardJobDivSelectedHide.style.display = 'none'
+                    }
+                }
+                break;
+            case  jobSelected.className.includes('tools'):
+                for(let i = 0; i < data.length; i++){
+                    if((jobSelected.innerHTML).includes(data[i].tools) ){
+                        console.log('SHOW elements')
+                    }else{
+                        console.log('HIDE')
+                        let cardJobDivSelectedHide = $('.card-job')[i]
+                        cardJobDivSelectedHide.style.display = 'none'
+                    }
+                }
+                break;
+            default:
+                console.log('not a role');
+        }
+        /*
         if(jobSelected.className.includes( 'role')){
             for(let i = 0; i < data.length; i++){
                 if((jobSelected.innerHTML).includes(data[i].role) ){
@@ -206,9 +256,29 @@ function showSelectedJobs(jobSelected){
                     cardJobDivSelectedHide.style.display = 'none'
                 }
             }
+        }else if(jobSelected.className.includes( 'languages')){
+            for(let i = 0; i < data.length; i++){
+                if((jobSelected.innerHTML).includes(data[i].languages) ){
+                    console.log('SHOW elements')
+                }else{
+                    console.log('HIDE')
+                    let cardJobDivSelectedHide = $('.card-job')[i]
+                    cardJobDivSelectedHide.style.display = 'none'
+                }
+            }
+        }else if(jobSelected.className.includes( 'tools')){
+            for(let i = 0; i < data.length; i++){
+                if((jobSelected.innerHTML).includes(data[i].tools) ){
+                    console.log('SHOW elements')
+                }else{
+                    console.log('HIDE')
+                    let cardJobDivSelectedHide = $('.card-job')[i]
+                    cardJobDivSelectedHide.style.display = 'none'
+                }
+            }
         }else{
             console.log('not a role')
-        }
+        }*/
     }else{
         console.log('no child')
     }
